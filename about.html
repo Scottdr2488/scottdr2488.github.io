@@ -49,14 +49,20 @@
 
     <script>
         const user = {
-            name: '',
-            imageUrl: '',
-            bio: ''
+            name: 'Scott Russell',
+            imageUrl: '/image/aboutpic2.jpg',
+            bio: "A Full time student pursuing a bachelor's in Science for Cybersecurity.  Author has just over seven years of experience in Law Enforcement and worked various roles in the oilfield before that.  Puzzles and technology are his two biggest hobbies when he isn't studying."
         };
 
         // Step one - Create a React element
-
+        const h1React = React.createElement('h1', null, user.name);
+        const imgReact = React.createElement('img', {src: user.imageUrl, className: 'img-fluid'});
+        const textReact = React.createElement('text', null, user.bio);
+        
         // Step 2: Render the React element
+        ReactDOM.render(h1React, document.GetElementById('h1'));
+        ReactDOM.render(imgReact, document.GetElementById('img'));
+        ReactDOM.render(textReact, document.GetElementById('content'));
 
     </script>
 
