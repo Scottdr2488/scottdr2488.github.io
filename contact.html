@@ -3,23 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <meta name="description" content="A student's sample page created during a web development course">
+        <meta name="author" content="N.Y. Business Esq. III">
         <title>Russell, Scott: 225</title>
-        <link rel="icon" href="images/favicon.ico">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+        <link rel="icon" type="image/jpg" href="images/favicon.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/styles.min.css" rel="stylesheet"> <!--Using minified stylesheet to increase load efficiency-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Scott Russell</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+        <a class="navbar-brand" href="#">Scott Russell</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
@@ -31,18 +34,41 @@
                 <li class="nav-item">
                     <a class="nav-link" href="carousel-after.html">Carousel</a>
                 </li>
-                    <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-                </ul>
-            </div>
-        </nav>
+            </ul>
+        </div>
+    </nav>
         <header>
         </header>
-        <main>
-            <h2>Contact</h2>
-            <p>Loren ipsum lorem ipsum</p>
-        <!--Form goes here-->
+        <!--Added in form for submitting questions, it is non-func since I need to combine with a client-side php script which I did not complete-->
+        <main role="main" class="container mt-5 pt-5">
+            <div class="justify-content-center">
+                <div class="col-md-8">
+                    <h1>Contact Me</h1>
+                    <p>I'm not sure why you'd have a question for me, but I'll do my best to answer!'</p>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control large-input" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control large-input" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control large-input" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control large-textarea" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
         </main>
     </body>
 </html>
